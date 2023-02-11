@@ -25,9 +25,7 @@ type ShoppingCartContext = {
 const ShoppingCartContext = createContext({} as ShoppingCartContext)
 
 export const useShoppingCart = () => {
-    return (
-        useContext(ShoppingCartContext)
-    )
+    return useContext(ShoppingCartContext)
 }
 
 export const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
@@ -41,10 +39,8 @@ export const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) =>
     const openCart = () => setIsOpen(true)
     const closeCart = () => setIsOpen(false)
 
-    const getItemQuantity = (id:number) => {
-        return (
-            cartItems.find(item => item.id === id)?.quantity || 0
-        )
+    const getItemQuantity = (id: number) => {
+        return cartItems.find(item => item.id === id)?.quantity || 0
     }
 
     const increaseCartQuantity = (id: number) => {
@@ -98,7 +94,6 @@ export const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) =>
                 closeCart,
                 cartItems,
                 cartQuantity,
-            
             }}
         >
             {children}

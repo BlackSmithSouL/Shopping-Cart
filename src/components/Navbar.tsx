@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom"
 import { useShoppingCart } from "../context/ShoppingCartContext"
 
 export const Navbar = () => {
-    
     const { openCart, cartQuantity } = useShoppingCart()
 
     return (
@@ -22,7 +21,8 @@ export const Navbar = () => {
                         About
                     </Nav.Link>
                 </Nav>
-                {cartQuantity > 0 && (<Button 
+                {cartQuantity > 0 && (
+                <Button 
                     onClick={openCart}
                     style={{ width: "3rem", height: "3rem", position: "relative"}} 
                     variant="outline-primary"

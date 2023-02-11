@@ -7,7 +7,6 @@ import { Navbar } from './components/Navbar'
 import { ShoppingCartProvider } from "./context/ShoppingCartContext"
 
 export const App = () => {
-
   return (
     <ShoppingCartProvider>
       <Navbar />
